@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './app.scss';
+import { Navigate, Route, Routes, useNavigate } from 'react-router-dom';
+import * as route from './services/routes'
+import { AllToDos, CompletedToDos, Input } from './components';
 
 function App() {
+  const navigation = useNavigate()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header className='app__header container'>
+        <Input />
+        <div className="app__header-tabs">
+          <button className='app__header-tabs_tab button' onClick={() => navigation(`${route.all}`)}>All</button>
+          <button className='app__header-tabs_tab button' onClick={() => navigation(`${route.completed}`)}>Completed</button>
+        </div>
       </header>
+      <main className="app__main container">
+        <Routes>
+          <Route path={route.all} element={<AllToDos/>}/>
+          <Route path={route.completed} element={<CompletedToDos />}/>
+          <Route path="*" element={<Navigate replace to={route.all} />} />
+        </Routes>
+      </main>
     </div>
   );
 }

@@ -1,0 +1,51 @@
+@import './variables';
+
+.container {
+  box-sizing: border-box;
+  padding: $padding-page 15px;
+  width: 100%;
+  max-width: $smallWidth;
+  @media (min-width: $mediumWidth) {
+    width: calc(100% - 40px);
+    max-width: calc($largeWidth - 124px);
+  }
+  @media (min-width: $largeWidth) {
+    width: calc(100% - 124px);
+    max-width: $largeWidth;
+  }
+  @media (min-width: $extraLargeWidth) {
+    width: calc(100% - 200px);
+    max-width: calc(#{$extraLargeWidth} - 200px);
+  }
+  @media (max-width: $extraSmallWidth) {
+    padding: $padding-page 10px;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #4D63EE ;
+  color: #fff;
+  border-radius: 10px;
+  height: 35px;
+  width: 100px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4D63EE ;
+
+  &:hover {
+    background-color: #233EE7;
+    color: white;
+    border: none;
+  }
+  &:disabled {
+    border-color: #D7DBDD;
+    background-color: #D7DBDD;
+    color: #747688;
+    &:hover {
+      cursor: auto;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.todo-list {
+  &__list {
+    list-style: none;
+  }
+  &__empty {
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+  }
+}

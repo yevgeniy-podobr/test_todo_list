@@ -1,0 +1,31 @@
+@import './globalStyles/main';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    &-tabs {
+      display: flex;
+      &_tab {
+        margin-left: 10px;
+      }
+    }
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+  }
+}

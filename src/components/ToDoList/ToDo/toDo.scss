@@ -1,0 +1,13 @@
+.todo {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  background-color: #EAEAEA;
+  border-radius: 10px;
+
+  &__checkbox {
+    margin-right: 10px;
+  }
+}
