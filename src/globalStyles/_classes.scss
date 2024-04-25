@@ -26,18 +26,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #4D63EE ;
-  color: #fff;
+  border: 2px solid #4D63EE;
+  color: #4D63EE;
   border-radius: 10px;
   height: 35px;
   width: 100px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #4D63EE ;
+  background-color: #fff;
 
   &:hover {
     background-color: #233EE7;
-    color: white;
+    color: #fff;
     border: none;
   }
   &:disabled {
