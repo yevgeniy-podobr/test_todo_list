@@ -1,4 +1,4 @@
-export * from './AllToDos'
-export * from './CompletedToDos'
-export * from './Input'
-export * from './ToDoList'
+export { AllToDos } from './AllToDos'
+export { CompletedToDos } from './CompletedToDos'
+export { Input } from './Input'
+export { ToDoList } from './ToDoList'
