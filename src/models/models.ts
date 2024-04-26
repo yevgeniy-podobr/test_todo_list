@@ -3,3 +3,7 @@ export interface IToDo {
   name: string
   isCompleted: boolean
 }
+
+export enum ESSKeys {
+  todoList = 'to-do-list'
+}

@@ -3,15 +3,10 @@ import { useTypedSelector } from "../../../redux/store"
 import { useDispatch } from "react-redux"
 import { setTodoList } from "../../../redux/todoListReducer"
 import './toDo.scss'
+import { ESSKeys, IToDo } from "../../../models"
 
-interface Props {
-  name: string
-  isCompleted: boolean
-  id: string
-}
-
-export const ToDo = (props: Props): ReactElement => {
-  const {name, isCompleted, id} = props
+export const ToDo = (props: IToDo): ReactElement => {
+  const { name, isCompleted, id } = props
   const dispatch = useDispatch()
   const todoList = useTypedSelector(s => s.todoList.todoList)
   const [checked, setChecked] = useState<boolean>(isCompleted)
@@ -23,6 +18,7 @@ export const ToDo = (props: Props): ReactElement => {
       isCompleted: !checked,
     } : todo)
     dispatch(setTodoList(preparedData))
+    sessionStorage.setItem(ESSKeys.todoList, JSON.stringify(preparedData))
   }
 
   return (

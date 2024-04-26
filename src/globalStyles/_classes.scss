@@ -1,24 +1,23 @@
-@import './variables';
 
 .container {
   box-sizing: border-box;
-  padding: $padding-page 15px;
+  padding: 34px 15px;
   width: 100%;
-  max-width: $smallWidth;
-  @media (min-width: $mediumWidth) {
+  max-width: 540px;
+  @media (min-width: 760px) {
     width: calc(100% - 40px);
-    max-width: calc($largeWidth - 124px);
+    max-width: 900px;
   }
-  @media (min-width: $largeWidth) {
+  @media (min-width: 1024px) {
     width: calc(100% - 124px);
-    max-width: $largeWidth;
+    max-width: 1024px;
   }
-  @media (min-width: $extraLargeWidth) {
+  @media (min-width: 1600px) {
     width: calc(100% - 200px);
-    max-width: calc(#{$extraLargeWidth} - 200px);
+    max-width: 1400px;
   }
-  @media (max-width: $extraSmallWidth) {
-    padding: $padding-page 10px;
+  @media (max-width: 360px) {
+    padding: 34px 10px;
   }
 }
 

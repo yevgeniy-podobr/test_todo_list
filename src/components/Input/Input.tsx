@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux"
 import { setTodoList } from "../../redux/todoListReducer"
 import { useTypedSelector } from "../../redux/store"
 import { v4 as uuidv4 } from 'uuid'
+import { ESSKeys } from "../../models"
 
 export const Input = (): ReactElement => {
   const dispatch = useDispatch()
@@ -20,6 +21,7 @@ export const Input = (): ReactElement => {
       }
     ]
     dispatch(setTodoList(preparedData))
+    sessionStorage.setItem(ESSKeys.todoList, JSON.stringify(preparedData))
     setNewTodo('')
   }
 
