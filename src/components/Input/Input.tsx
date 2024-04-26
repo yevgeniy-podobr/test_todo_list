@@ -16,7 +16,7 @@ export const Input = (): ReactElement => {
       ...todoList,
       {
         id: uuidv4(),
-        name: newTodo,
+        name: newTodo.trim(),
         isCompleted: false,
       }
     ]
@@ -38,7 +38,7 @@ export const Input = (): ReactElement => {
       <button 
         className="input__btn button"
         onClick={onAddTodo}
-        disabled={!newTodo}
+        disabled={!newTodo.trim()}
       >Add</button>
     </div>
   )
