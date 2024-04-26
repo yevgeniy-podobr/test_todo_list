@@ -33,7 +33,11 @@ export const Input = (): ReactElement => {
         className="input__content"
         value={newTodo}  
         onChange={(e): void => setNewTodo(e.target.value)}
-        onKeyDown={(e): false | void => e.key === "Enter" && onAddTodo()}
+        onKeyDown={(e): false | void => {
+          if (newTodo.trim()) {
+            e.key === "Enter" && onAddTodo()
+          }
+        }}
       />
       <button 
         className="input__btn button"
