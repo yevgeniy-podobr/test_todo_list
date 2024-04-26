@@ -2,7 +2,7 @@
 
 ## Demo link
 
-Follow the link to the [live demo]
+Follow the link to the [live demo](https://test-todo-list-1s1i.onrender.com)
 
 ## Tech Stack
 
